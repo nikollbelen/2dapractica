@@ -147,6 +147,24 @@
         </div>
     </section>
     <!-- bredcrumb Area End --> 
+    <!-- category Area Start-->
+        <section class="category-area">
+            <div class="container">
+                <div class="row justify-content-center">
+                    {% for category in category_list %}
+                    <div class="col-lg-3 align-self-center">
+                        <ul class="category-menu">
+                            <h4 style='color:white'>..vsfcs.</h4>
+                            <li class="category-wrap"><a href="/web/categoria/{{ category.id }}/"><img src="{{ category.imagen.url }}" alt="category" width="100px" height="100px"></a></li>
+                            <a href="/web/categoria/{{ category.id }}/"><h4 style='color:white'>..</h4></a>
+                            <li><a href="/web/categoria/{{ category.id }}/">{{ category.nombre }}</a></li>
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- category Area End --> 
     {% block content %}
     {% endblock %} 
 

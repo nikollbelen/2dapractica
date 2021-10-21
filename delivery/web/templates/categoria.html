@@ -13,13 +13,13 @@
                         <a class="fav-btn" href="producto/{{ prod.id }}"><i class="ri-heart-line"></i></a>
                     </div>
                     <div class="wrap-details">
-                        <h5><a href="producto/{{ prod.id }}">{{ prod.nombre }} </a></h5>
+                        <h5><a href="{% url 'web:producto' prod.id %}">{{ prod.nombre }} </a></h5>
                         <div class="wrap-footer">
                             <h6 class="price">{{ prod.precio }}</h6>
                         </div>                            
                     </div>
                     <div class="btn-area">
-                        <a class="btn btn-secondary" href="producto/{{ prod.id }}">DETALLE </a>         
+                        <a class="btn btn-secondary" href="{% url 'web:producto' prod.id %}">DETALLE </a>         
                     </div> 
                 </div>
             </div>
